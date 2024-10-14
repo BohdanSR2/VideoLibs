@@ -1,4 +1,4 @@
-# Python Modules Lib
+# Python Video Modules Lib
 
 # 1. Video Readers
 
@@ -162,21 +162,3 @@ while cv_file_reader.is_opened:
         break
     writer.write(frame)
 ```
-
-
-# 3. Logging Configurator
-
-Set up logger for further usage
-
-```python
-import logging
-from logging_config import LoggerSetup
-
-logger = LoggerSetup(level=logging.DEBUG,
-                         datefmt='%Y-%m-%d %H:%M:%S',
-                         msg_format='%(asctime)s|%(name)s|%(levelname)s - %(message)s',
-                         output_file='app.log').create_logger(name='TEST_LOGGER')
-logger.debug('Debug log')
-```
-***NOTE:*** in case if debug in cmd is needed set output_file to None
-
